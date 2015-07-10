@@ -16,6 +16,7 @@
 		93D037F71B4CCECA00927D17 /* SportsProphetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037F61B4CCECA00927D17 /* SportsProphetTests.m */; };
 		93D038031B4F7E8E00927D17 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D038021B4F7E8E00927D17 /* DataManager.m */; };
 		93D038061B4F843B00927D17 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93D038051B4F843B00927D17 /* Keys.plist */; };
+		93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ED62FA1B4F88F00004D9E5 /* Player.m */; };
 		9BE06066BFCF5C70FA3343AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73B4480946FDF47B6637776 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		93D038011B4F7E8E00927D17 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		93D038021B4F7E8E00927D17 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		93D038051B4F843B00927D17 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		93ED62F91B4F88F00004D9E5 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		93ED62FA1B4F88F00004D9E5 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		CE3516B992AAFABBAA00318F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D73B4480946FDF47B6637776 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,10 +130,10 @@
 		93D037DA1B4CCEC900927D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93D037DB1B4CCEC900927D17 /* Info.plist */,
-				93D037DC1B4CCEC900927D17 /* main.m */,
 				93D038001B4CCF8C00927D17 /* SportsProphet-Prefix.pch */,
+				93D037DB1B4CCEC900927D17 /* Info.plist */,
 				93D038051B4F843B00927D17 /* Keys.plist */,
+				93D037DC1B4CCEC900927D17 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,6 +160,8 @@
 			children = (
 				93D038011B4F7E8E00927D17 /* DataManager.h */,
 				93D038021B4F7E8E00927D17 /* DataManager.m */,
+				93ED62F91B4F88F00004D9E5 /* Player.h */,
+				93ED62FA1B4F88F00004D9E5 /* Player.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				93D038031B4F7E8E00927D17 /* DataManager.m in Sources */,
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,
+				93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

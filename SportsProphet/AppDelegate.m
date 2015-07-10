@@ -25,12 +25,23 @@
 
 -(void)parseSetup
 {
+    //Private Keys in Keys.plist (hidden via gitignore)
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
     NSString *applicationId = [dictionary objectForKey:@"ParseAppID"];
     NSString *clientKey = [dictionary objectForKey:@"ParseClientKey"];
 
     [Parse setApplicationId:applicationId
                   clientKey:clientKey];
+
+    [self tokenRetrieval];
+}
+
+-(void)tokenRetrieval
+{
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+        NSString *token = config[@"xmlstatsToken"];
+        NSLog(@"%@", token);
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

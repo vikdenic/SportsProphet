@@ -27,6 +27,14 @@
     [super tearDown];
 }
 
+//-(void)testXMLStatsTokenRetrieval
+//{
+//    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+//        NSString *token = config[@"xmlstatsToken"];
+//        NSLog(@"%@", token);
+//    }];
+//}
+
 -(void)testTeamsRetrieval
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Testing Async Method Works!"];
@@ -49,12 +57,6 @@
     }];
 
     [self waitForExpectationsWithTimeout:6.0 handler:nil];
-}
-
-- (void)testExample
-{
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
 }
 
 - (void)testPerformanceExample
