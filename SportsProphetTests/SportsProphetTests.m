@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "DataManager.h"
 
 @interface SportsProphetTests : XCTestCase
 
@@ -15,7 +16,8 @@
 
 @implementation SportsProphetTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
@@ -25,12 +27,38 @@
     [super tearDown];
 }
 
-- (void)testExample {
+-(void)testTeamsRetrieval
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing Async Method Works!"];
+
+    [DataManager retreiveTeamswithBlock:^(NSArray *teams, NSError *error) {
+        XCTAssertNotNil(teams);
+        [expectation fulfill];
+    }];
+
+    [self waitForExpectationsWithTimeout:6.0 handler:nil];
+}
+
+-(void)testDraftRetrieval
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing Async Method Works!"];
+
+    [DataManager retrieve2015DraftPicksWithBlock:^(NSArray *players, NSError *error) {
+        XCTAssertNotNil(players);
+        [expectation fulfill];
+    }];
+
+    [self waitForExpectationsWithTimeout:6.0 handler:nil];
+}
+
+- (void)testExample
+{
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
 }
 
-- (void)testPerformanceExample {
+- (void)testPerformanceExample
+{
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
