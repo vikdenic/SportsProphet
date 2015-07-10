@@ -1,0 +1,7 @@
+pod 'AFNetworking', '~> 2.5'
+
+
+pod 'Parse', '~> 1.7'
+pod 'ParseUI', '~> 1.1'
+pod 'ParseFacebookUtilsV4', '~> 1.7'
+pod 'ParseCrashReporting', '~> 1.7'
