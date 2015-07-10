@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "DataManager.h"
+#import "Parse.h"
 
 @interface SportsProphetTests : XCTestCase
 
@@ -19,7 +20,7 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [self parseSetup];
 }
 
 - (void)tearDown {
@@ -27,17 +28,23 @@
     [super tearDown];
 }
 
-//-(void)testXMLStatsTokenRetrieval
-//{
-//    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
-//        NSString *token = config[@"xmlstatsToken"];
-//        NSLog(@"%@", token);
-//    }];
-//}
+-(void)testXMLStatsTokenRetrieval
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing token retrieval"];
+
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+        NSString *token = config[@"xmlstatsToken"];
+        XCTAssertNotNil(token);
+
+        [expectation fulfill];
+    }];
+
+    [self waitForExpectationsWithTimeout:6.0 handler:nil];
+}
 
 -(void)testTeamsRetrieval
 {
-    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing Async Method Works!"];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing teams retrieval"];
 
     [DataManager retreiveTeamswithBlock:^(NSArray *teams, NSError *error) {
         XCTAssertNotNil(teams);
@@ -49,7 +56,7 @@
 
 -(void)testDraftRetrieval
 {
-    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing Async Method Works!"];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Testing draft picks retrieval"];
 
     [DataManager retrieve2015DraftPicksWithBlock:^(NSArray *players, NSError *error) {
         XCTAssertNotNil(players);
@@ -65,6 +72,17 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+-(void)parseSetup
+{
+    //Private Keys in Keys.plist (hidden via gitignore)
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
+    NSString *applicationId = [dictionary objectForKey:@"ParseAppID"];
+    NSString *clientKey = [dictionary objectForKey:@"ParseClientKey"];
+
+    [Parse setApplicationId:applicationId
+                  clientKey:clientKey];
 }
 
 @end

@@ -456,6 +456,7 @@
 		};
 		93D037FE1B4CCECA00927D17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1300FC96A11FF49332B82C03 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
