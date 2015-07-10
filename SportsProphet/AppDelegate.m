@@ -20,6 +20,8 @@
     [ParseCrashReporting enable];
     [self parseSetup];
 
+    [self sportsAPITokenRetrieval];
+
     return YES;
 }
 
@@ -32,15 +34,22 @@
 
     [Parse setApplicationId:applicationId
                   clientKey:clientKey];
-
-    [self tokenRetrieval];
 }
 
--(void)tokenRetrieval
+-(void)sportsAPITokenRetrieval
 {
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
-        NSString *token = config[@"xmlstatsToken"];
-        NSLog(@"%@", token);
+
+        if (error == nil)
+        {
+            NSString *token = config[@"xmlstatsToken"];
+            [UniversalToken sharedInstance].token = token;
+            NSLog(@"xmlstats token: %@", token);
+        }
+        else
+        {
+            NSLog(@"%@", error);
+        }
     }];
 }
 
