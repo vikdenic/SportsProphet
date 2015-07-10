@@ -14,6 +14,7 @@
 		93D037E81B4CCEC900927D17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D037E71B4CCEC900927D17 /* Images.xcassets */; };
 		93D037EB1B4CCEC900927D17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D037E91B4CCEC900927D17 /* LaunchScreen.xib */; };
 		93D037F71B4CCECA00927D17 /* SportsProphetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037F61B4CCECA00927D17 /* SportsProphetTests.m */; };
+		93D038031B4F7E8E00927D17 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D038021B4F7E8E00927D17 /* DataManager.m */; };
 		9BE06066BFCF5C70FA3343AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73B4480946FDF47B6637776 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		93D037F51B4CCECA00927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037F61B4CCECA00927D17 /* SportsProphetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SportsProphetTests.m; sourceTree = "<group>"; };
 		93D038001B4CCF8C00927D17 /* SportsProphet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SportsProphet-Prefix.pch"; sourceTree = "<group>"; };
+		93D038011B4F7E8E00927D17 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		93D038021B4F7E8E00927D17 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		CE3516B992AAFABBAA00318F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D73B4480946FDF47B6637776 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +113,7 @@
 				93D037DF1B4CCEC900927D17 /* AppDelegate.m */,
 				93D037E11B4CCEC900927D17 /* ViewController.h */,
 				93D037E21B4CCEC900927D17 /* ViewController.m */,
+				93D038041B4F7E9700927D17 /* Data Model */,
 				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037E71B4CCEC900927D17 /* Images.xcassets */,
 				93D037E91B4CCEC900927D17 /* LaunchScreen.xib */,
@@ -143,6 +147,15 @@
 				93D037F51B4CCECA00927D17 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93D038041B4F7E9700927D17 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				93D038011B4F7E8E00927D17 /* DataManager.h */,
+				93D038021B4F7E8E00927D17 /* DataManager.m */,
+			);
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D037E31B4CCEC900927D17 /* ViewController.m in Sources */,
+				93D038031B4F7E8E00927D17 /* DataManager.m in Sources */,
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,
 			);
