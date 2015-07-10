@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <ParseCrashReporting/ParseCrashReporting.h>
 
 @interface AppDelegate ()
 
@@ -14,11 +15,22 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [ParseCrashReporting enable];
+    [self parseSetup];
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     return YES;
+}
+
+-(void)parseSetup
+{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
+    NSString *applicationId = [dictionary objectForKey:@"ParseAppID"];
+    NSString *clientKey = [dictionary objectForKey:@"ParseClientKey"];
+
+    [Parse setApplicationId:applicationId
+                  clientKey:clientKey];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
