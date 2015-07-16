@@ -15,6 +15,25 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
     [manager GET:@"https://erikberg.com/nba/teams.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        completion(responseObject, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+        completion(nil, error);
+    }];
+}
+
++(void)retrieverRosterForTeam:(NSString *)team withBlock:(void (^)(NSDictionary *dictionary, NSError *error))completion
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+
+    [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
+
+    NSString *urlString = [NSString stringWithFormat:@"https://erikberg.com/nba/roster/%@.json", team];
+
+    [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSLog(@"JSON: %@", responseObject);
         completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -27,7 +46,9 @@
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    [manager.requestSerializer setValue:@"Bearer fdb914cc-9de6-43f0-a277-114ea44d7443" forHTTPHeaderField:@"Authorization"];
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+
+    [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
     NSDictionary *paramaters = @{@"season" : @"2015"};
 
     [manager GET:@"https://erikberg.com/nba/draft.json" parameters:paramaters success:^(AFHTTPRequestOperation *operation, id responseObject) {

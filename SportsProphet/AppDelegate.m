@@ -20,7 +20,7 @@
     [ParseCrashReporting enable];
     [self parseSetup];
 
-    [self sportsAPITokenRetrieval];
+//    [self sportsAPITokenRetrieval];
 
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934E44A31B577A9D00F6CA2B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A21B577A9D00F6CA2B /* Constants.m */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
 		93D037E31B4CCEC900927D17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		1300FC96A11FF49332B82C03 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		934E44A11B577A9D00F6CA2B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		934E44A21B577A9D00F6CA2B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		93D037D71B4CCEC900927D17 /* SportsProphet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsProphet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D037DB1B4CCEC900927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +97,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		934E44A01B577A6700F6CA2B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				93D038001B4CCF8C00927D17 /* SportsProphet-Prefix.pch */,
+				934E44A11B577A9D00F6CA2B /* Constants.h */,
+				934E44A21B577A9D00F6CA2B /* Constants.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		93D037CE1B4CCEC900927D17 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 				93D037E11B4CCEC900927D17 /* ViewController.h */,
 				93D037E21B4CCEC900927D17 /* ViewController.m */,
 				93D038041B4F7E9700927D17 /* Data Model */,
+				934E44A01B577A6700F6CA2B /* Utilities */,
 				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037E71B4CCEC900927D17 /* Images.xcassets */,
 				93D037E91B4CCEC900927D17 /* LaunchScreen.xib */,
@@ -133,7 +147,6 @@
 		93D037DA1B4CCEC900927D17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93D038001B4CCF8C00927D17 /* SportsProphet-Prefix.pch */,
 				93D037DB1B4CCEC900927D17 /* Info.plist */,
 				93D038051B4F843B00927D17 /* Keys.plist */,
 				93D037DC1B4CCEC900927D17 /* main.m */,
@@ -312,6 +325,7 @@
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,
 				93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */,
+				934E44A31B577A9D00F6CA2B /* Constants.m in Sources */,
 				93ED62FE1B4FA3310004D9E5 /* UniversalToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

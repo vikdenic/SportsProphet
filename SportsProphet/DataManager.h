@@ -12,6 +12,8 @@
 
 +(void)retreiveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion;
 
++(void)retrieverRosterForTeam:(NSString *)team withBlock:(void (^)(NSDictionary *dictionary, NSError *error))completion;
+
 +(void)retrieve2015DraftPicksWithBlock:(void (^)(NSArray *players, NSError *error))completion;
 
 @end

@@ -17,6 +17,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
+        [DataManager retrieverRosterForTeam:kChicagoBulls withBlock:^(NSDictionary *dictionary, NSError *error) {
+            NSLog(@"%@", dictionary);
+        }];
+    }];
+}
+
+-(void)sportsAPITokenRetrievalWithBlock:(void (^)(BOOL success, NSError *error))completion;
+{
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+
+        if (error == nil)
+        {
+            NSString *token = config[@"xmlstatsToken"];
+            [UniversalToken sharedInstance].token = token;
+            NSLog(@"xmlstats token: %@", token);
+        }
+        else
+        {
+            NSLog(@"%@", error);
+        }
+
+        completion(YES, error);
+    }];
 }
 
 @end
