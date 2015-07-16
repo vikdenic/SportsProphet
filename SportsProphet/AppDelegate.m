@@ -18,7 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ParseCrashReporting enable];
+    [Team registerSubclass];
     [Player registerSubclass];
+    
     [self parseSetup];
 
 //    [self sportsAPITokenRetrieval];

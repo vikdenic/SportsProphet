@@ -15,10 +15,24 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
     [manager GET:@"https://erikberg.com/nba/teams.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        completion(responseObject, nil);
+
+        NSMutableArray *newTeamsArray = [NSMutableArray new];
+        NSArray *teamsArray = responseObject;
+
+        for (NSDictionary *team in teamsArray)
+        {
+            Team *newTeam = [Team new];
+
+            newTeam.name = [team objectForKey:@"full_name"];
+            newTeam.conference = [team objectForKey:@"conference"];
+
+            [newTeamsArray addObject:newTeam];
+        }
+
+//        NSLog(@"JSON: %@", newTeamsArray);
+        completion(newTeamsArray, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@", error);
+        NSLog(@"Error: %@", error);
         completion(nil, error);
     }];
 }
@@ -34,7 +48,6 @@
     NSString *urlString = [NSString stringWithFormat:@"https://erikberg.com/nba/roster/%@.json", team];
 
     [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"JSON: %@", responseObject);
 
         NSMutableArray *newPlayersArray = [NSMutableArray new];
         NSArray *playersArray = [responseObject valueForKey:@"players"];
@@ -50,6 +63,7 @@
             [newPlayersArray addObject:newPlayer];
         }
 
+//        NSLog(@"JSON: %@", responseObject);
         completion(newPlayersArray, nil);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

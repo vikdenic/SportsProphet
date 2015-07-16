@@ -19,6 +19,7 @@
 #import <ParseUI/ParseUI.h>
 
 //Model
+#import "Team.h"
 #import "Player.h"
 
 //Singeltons

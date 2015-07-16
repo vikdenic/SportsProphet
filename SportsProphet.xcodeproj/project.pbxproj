@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		934E44A31B577A9D00F6CA2B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A21B577A9D00F6CA2B /* Constants.m */; };
+		934E44A61B583E2900F6CA2B /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A51B583E2900F6CA2B /* Team.m */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
 		93D037E31B4CCEC900927D17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 		1300FC96A11FF49332B82C03 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		934E44A11B577A9D00F6CA2B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		934E44A21B577A9D00F6CA2B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		934E44A41B583E2900F6CA2B /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		934E44A51B583E2900F6CA2B /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		93D037D71B4CCEC900927D17 /* SportsProphet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsProphet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D037DB1B4CCEC900927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 			children = (
 				93D038011B4F7E8E00927D17 /* DataManager.h */,
 				93D038021B4F7E8E00927D17 /* DataManager.m */,
+				934E44A41B583E2900F6CA2B /* Team.h */,
+				934E44A51B583E2900F6CA2B /* Team.m */,
 				93ED62F91B4F88F00004D9E5 /* Player.h */,
 				93ED62FA1B4F88F00004D9E5 /* Player.m */,
 				93ED62FC1B4FA3310004D9E5 /* UniversalToken.h */,
@@ -320,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934E44A61B583E2900F6CA2B /* Team.m in Sources */,
 				93D037E31B4CCEC900927D17 /* ViewController.m in Sources */,
 				93D038031B4F7E8E00927D17 /* DataManager.m in Sources */,
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,

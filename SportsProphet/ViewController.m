@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property NSArray *teamsArray;
+
 @end
 
 @implementation ViewController
@@ -19,7 +21,8 @@
     [super viewDidLoad];
 
     [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
-        [DataManager retrieverRosterForTeam:kChicagoBulls withBlock:^(NSArray *players, NSError *error) {
+
+        [DataManager retrieve2015DraftPicksWithBlock:^(NSArray *players, NSError *error) {
             NSLog(@"%@", players);
         }];
     }];

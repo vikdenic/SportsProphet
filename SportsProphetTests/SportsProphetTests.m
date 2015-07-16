@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "DataManager.h"
 #import "Parse.h"
+#import "UniversalToken.h"
 
 @interface SportsProphetTests : XCTestCase
 
@@ -46,9 +47,12 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Testing teams retrieval"];
 
-    [DataManager retreiveTeamswithBlock:^(NSArray *teams, NSError *error) {
-        XCTAssertNotNil(teams);
-        [expectation fulfill];
+    [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
+
+        [DataManager retreiveTeamswithBlock:^(NSArray *teams, NSError *error) {
+            XCTAssertNotNil(teams);
+            [expectation fulfill];
+        }];
     }];
 
     [self waitForExpectationsWithTimeout:6.0 handler:nil];
@@ -58,9 +62,12 @@
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Testing draft picks retrieval"];
 
-    [DataManager retrieve2015DraftPicksWithBlock:^(NSArray *players, NSError *error) {
-        XCTAssertNotNil(players);
-        [expectation fulfill];
+    [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
+
+        [DataManager retrieve2015DraftPicksWithBlock:^(NSArray *players, NSError *error) {
+            XCTAssertNotNil(players);
+            [expectation fulfill];
+        }];
     }];
 
     [self waitForExpectationsWithTimeout:6.0 handler:nil];
@@ -83,6 +90,25 @@
 
     [Parse setApplicationId:applicationId
                   clientKey:clientKey];
+}
+
+-(void)sportsAPITokenRetrievalWithBlock:(void (^)(BOOL success, NSError *error))completion;
+{
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+
+        if (error == nil)
+        {
+            NSString *token = config[@"xmlstatsToken"];
+            [UniversalToken sharedInstance].token = token;
+            NSLog(@"xmlstats token: %@", token);
+        }
+        else
+        {
+            NSLog(@"%@", error);
+        }
+
+        completion(YES, error);
+    }];
 }
 
 @end
