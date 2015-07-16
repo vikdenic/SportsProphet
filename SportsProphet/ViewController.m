@@ -19,8 +19,8 @@
     [super viewDidLoad];
 
     [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
-        [DataManager retrieverRosterForTeam:kChicagoBulls withBlock:^(NSDictionary *dictionary, NSError *error) {
-            NSLog(@"%@", dictionary);
+        [DataManager retrieverRosterForTeam:kChicagoBulls withBlock:^(NSArray *players, NSError *error) {
+            NSLog(@"%@", players);
         }];
     }];
 }

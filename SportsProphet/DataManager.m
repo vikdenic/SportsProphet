@@ -23,7 +23,7 @@
     }];
 }
 
-+(void)retrieverRosterForTeam:(NSString *)team withBlock:(void (^)(NSDictionary *dictionary, NSError *error))completion
++(void)retrieverRosterForTeam:(NSString *)team withBlock:(void (^)(NSArray *players, NSError *error))completion
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
@@ -35,7 +35,23 @@
 
     [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSLog(@"JSON: %@", responseObject);
-        completion(responseObject, nil);
+
+        NSMutableArray *newPlayersArray = [NSMutableArray new];
+        NSArray *playersArray = [responseObject valueForKey:@"players"];
+
+        for (NSDictionary *player in playersArray)
+        {
+            Player *newPlayer = [Player new];
+
+            newPlayer.fullName = [player objectForKey:@"display_name"];
+            newPlayer.uniformNumber = [[player objectForKey:@"uniform_number"] stringValue];
+            newPlayer.position = [player objectForKey:@"position"];
+
+            [newPlayersArray addObject:newPlayer];
+        }
+
+        completion(newPlayersArray, nil);
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         completion(nil, error);

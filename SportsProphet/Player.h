@@ -10,8 +10,9 @@
 
 @interface Player : PFObject <PFSubclassing>
 
-@property NSString *firstName;
-@property NSString *lastName;
+@property NSString *fullName;
+@property NSString *uniformNumber;
+@property NSString *position;
 
 +(NSString *)parseClassName;
 

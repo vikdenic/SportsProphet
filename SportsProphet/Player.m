@@ -10,8 +10,9 @@
 
 @implementation Player
 
-@dynamic firstName;
-@dynamic lastName;
+@dynamic fullName;
+@dynamic uniformNumber;
+@dynamic position;
 
 +(NSString *)parseClassName
 {
