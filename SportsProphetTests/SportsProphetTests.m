@@ -49,7 +49,7 @@
 
     [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
 
-        [DataManager retreiveTeamswithBlock:^(NSArray *teams, NSError *error) {
+        [DataManager retrieveTeamswithBlock:^(NSArray *teams, NSError *error) {
             XCTAssertNotNil(teams);
             [expectation fulfill];
         }];

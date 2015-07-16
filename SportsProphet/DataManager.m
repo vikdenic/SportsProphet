@@ -10,7 +10,7 @@
 
 @implementation DataManager
 
-+(void)retreiveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion
++(void)retrieveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 

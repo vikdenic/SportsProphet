@@ -133,13 +133,13 @@
 		93D037D91B4CCEC900927D17 /* SportsProphet */ = {
 			isa = PBXGroup;
 			children = (
+				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037DE1B4CCEC900927D17 /* AppDelegate.h */,
 				93D037DF1B4CCEC900927D17 /* AppDelegate.m */,
 				93D037E11B4CCEC900927D17 /* ViewController.h */,
 				93D037E21B4CCEC900927D17 /* ViewController.m */,
 				93D038041B4F7E9700927D17 /* Data Model */,
 				934E44A01B577A6700F6CA2B /* Utilities */,
-				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037E71B4CCEC900927D17 /* Images.xcassets */,
 				93D037E91B4CCEC900927D17 /* LaunchScreen.xib */,
 				93D037DA1B4CCEC900927D17 /* Supporting Files */,

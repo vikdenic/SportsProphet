@@ -10,7 +10,7 @@
 
 @interface DataManager : NSObject
 
-+(void)retreiveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion;
++(void)retrieveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion;
 
 +(void)retrieverRosterForTeam:(NSString *)team withBlock:(void (^)(NSArray *players, NSError *error))completion;
 
