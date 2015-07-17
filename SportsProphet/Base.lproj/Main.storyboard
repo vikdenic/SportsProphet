@@ -95,11 +95,90 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="raA-2G-mac" id="h0d-W6-mo2"/>
+                        <segue destination="PUy-aF-cS1" kind="presentation" identifier="NotLoggedInSegue" id="YYK-Hh-gRA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795.5" y="442"/>
+            <point key="canvasLocation" x="2035.5" y="1108"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="pL2-Sn-V35">
+            <objects>
+                <viewController id="PUy-aF-cS1" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zdl-Pq-AT0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ez2-J2-Re2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KPM-OA-MGJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dy6-x6-Esy">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="155" width="199" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dux-zS-9vZ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="216" width="199" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh1-Fb-LxD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="285" width="199" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onLoginButtonTapped:" destination="PUy-aF-cS1" eventType="touchUpInside" id="1dp-T6-cRs"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dht-r9-ovQ">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Login"/>
+                                    <segment title="Sign Up"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="89" width="199" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Dy6-x6-Esy"/>
+                                <exclude reference="dux-zS-9vZ"/>
+                                <exclude reference="sh1-Fb-LxD"/>
+                                <exclude reference="Dht-r9-ovQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Dy6-x6-Esy"/>
+                                <include reference="dux-zS-9vZ"/>
+                                <include reference="sh1-Fb-LxD"/>
+                                <include reference="Dht-r9-ovQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="dux-zS-9vZ" id="cqX-3X-xf8"/>
+                        <outlet property="segmentedControl" destination="Dht-r9-ovQ" id="Ult-Wz-RLh"/>
+                        <outlet property="usernameTextfield" destination="Dy6-x6-Esy" id="GR1-9V-IOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHR-dZ-not" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kpr-s9-xEB">
@@ -117,7 +196,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9CM-pD-D0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="1103"/>
+            <point key="canvasLocation" x="823.5" y="1103"/>
         </scene>
     </scenes>
 </document>

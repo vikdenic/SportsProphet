@@ -11,5 +11,6 @@
 @implementation Constants
 
 NSString *const kChicagoBulls = @"chicago-bulls";
+NSString *const kSegueNotLoggedIn = @"NotLoggedInSegue";
 
 @end

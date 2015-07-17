@@ -20,6 +20,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    if ([User currentUser] == nil)
+    {
+        [self performSegueWithIdentifier:kSegueNotLoggedIn sender:self];
+    }
+
     self.teamsArray = [NSMutableArray new];
 
     self.edgesForExtendedLayout = UIRectEdgeNone;

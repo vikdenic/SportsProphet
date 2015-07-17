@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		934E44A31B577A9D00F6CA2B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A21B577A9D00F6CA2B /* Constants.m */; };
 		934E44A61B583E2900F6CA2B /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A51B583E2900F6CA2B /* Team.m */; };
+		934E44AC1B58BD9500F6CA2B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44AB1B58BD9500F6CA2B /* User.m */; };
+		934E44AF1B58BE2900F6CA2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44AE1B58BE2900F6CA2B /* LoginViewController.m */; };
+		934E44B31B58C32F00F6CA2B /* VZAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44B21B58C32F00F6CA2B /* VZAlert.m */; };
+		935CB2CF1B58E0EC00EAC6EA /* Prediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 935CB2CE1B58E0EC00EAC6EA /* Prediction.m */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
 		93D037E31B4CCEC900927D17 /* RankYourNBATeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* RankYourNBATeamsViewController.m */; };
@@ -39,6 +43,14 @@
 		934E44A21B577A9D00F6CA2B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		934E44A41B583E2900F6CA2B /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		934E44A51B583E2900F6CA2B /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		934E44AA1B58BD9500F6CA2B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		934E44AB1B58BD9500F6CA2B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		934E44AD1B58BE2900F6CA2B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		934E44AE1B58BE2900F6CA2B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		934E44B11B58C32F00F6CA2B /* VZAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VZAlert.h; sourceTree = "<group>"; };
+		934E44B21B58C32F00F6CA2B /* VZAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VZAlert.m; sourceTree = "<group>"; };
+		935CB2CD1B58E0EC00EAC6EA /* Prediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prediction.h; sourceTree = "<group>"; };
+		935CB2CE1B58E0EC00EAC6EA /* Prediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prediction.m; sourceTree = "<group>"; };
 		93D037D71B4CCEC900927D17 /* SportsProphet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsProphet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D037DB1B4CCEC900927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +118,21 @@
 				93D038001B4CCF8C00927D17 /* SportsProphet-Prefix.pch */,
 				934E44A11B577A9D00F6CA2B /* Constants.h */,
 				934E44A21B577A9D00F6CA2B /* Constants.m */,
+				934E44B11B58C32F00F6CA2B /* VZAlert.h */,
+				934E44B21B58C32F00F6CA2B /* VZAlert.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		934E44B01B58BE3100F6CA2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				934E44AD1B58BE2900F6CA2B /* LoginViewController.h */,
+				934E44AE1B58BE2900F6CA2B /* LoginViewController.m */,
+				93D037E11B4CCEC900927D17 /* RankYourNBATeamsViewController.h */,
+				93D037E21B4CCEC900927D17 /* RankYourNBATeamsViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		93D037CE1B4CCEC900927D17 = {
@@ -136,8 +161,7 @@
 				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037DE1B4CCEC900927D17 /* AppDelegate.h */,
 				93D037DF1B4CCEC900927D17 /* AppDelegate.m */,
-				93D037E11B4CCEC900927D17 /* RankYourNBATeamsViewController.h */,
-				93D037E21B4CCEC900927D17 /* RankYourNBATeamsViewController.m */,
+				934E44B01B58BE3100F6CA2B /* Controllers */,
 				93D038041B4F7E9700927D17 /* Data Model */,
 				934E44A01B577A6700F6CA2B /* Utilities */,
 				93D037E71B4CCEC900927D17 /* Images.xcassets */,
@@ -179,10 +203,14 @@
 			children = (
 				93D038011B4F7E8E00927D17 /* DataManager.h */,
 				93D038021B4F7E8E00927D17 /* DataManager.m */,
+				934E44AA1B58BD9500F6CA2B /* User.h */,
+				934E44AB1B58BD9500F6CA2B /* User.m */,
 				934E44A41B583E2900F6CA2B /* Team.h */,
 				934E44A51B583E2900F6CA2B /* Team.m */,
 				93ED62F91B4F88F00004D9E5 /* Player.h */,
 				93ED62FA1B4F88F00004D9E5 /* Player.m */,
+				935CB2CD1B58E0EC00EAC6EA /* Prediction.h */,
+				935CB2CE1B58E0EC00EAC6EA /* Prediction.m */,
 				93ED62FC1B4FA3310004D9E5 /* UniversalToken.h */,
 				93ED62FD1B4FA3310004D9E5 /* UniversalToken.m */,
 			);
@@ -327,7 +355,11 @@
 			files = (
 				934E44A61B583E2900F6CA2B /* Team.m in Sources */,
 				93D037E31B4CCEC900927D17 /* RankYourNBATeamsViewController.m in Sources */,
+				934E44AC1B58BD9500F6CA2B /* User.m in Sources */,
+				934E44B31B58C32F00F6CA2B /* VZAlert.m in Sources */,
+				935CB2CF1B58E0EC00EAC6EA /* Prediction.m in Sources */,
 				93D038031B4F7E8E00927D17 /* DataManager.m in Sources */,
+				934E44AF1B58BE2900F6CA2B /* LoginViewController.m in Sources */,
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,
 				93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */,

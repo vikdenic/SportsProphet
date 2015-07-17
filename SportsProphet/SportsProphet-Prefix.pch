@@ -19,6 +19,7 @@
 #import <ParseUI/ParseUI.h>
 
 //Model
+#import "User.h"
 #import "Team.h"
 #import "Player.h"
 
@@ -27,5 +28,6 @@
 
 //Utilities
 #import "Constants.h"
+#import "VZAlert.h"
 
 #endif
