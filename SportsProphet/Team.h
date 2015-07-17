@@ -12,5 +12,7 @@
 
 @property NSString *name;
 @property NSString *conference;
+@property NSString *record;
+@property NSString *rank;
 
 @end

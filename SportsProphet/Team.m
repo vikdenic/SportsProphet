@@ -12,6 +12,8 @@
 
 @dynamic name;
 @dynamic conference;
+@dynamic record;
+@dynamic rank;
 
 +(NSString *)parseClassName
 {

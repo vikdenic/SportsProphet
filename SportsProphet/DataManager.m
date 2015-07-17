@@ -72,6 +72,39 @@
     }];
 }
 
++(void)retrieveStandingsWithBlock:(void (^)(NSArray *teams, NSError *error))completion
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+
+    [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
+
+    [manager GET:@"https://erikberg.com/nba/standings.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        NSMutableArray *teamsArray = [NSMutableArray new];
+
+        for (NSDictionary *standing in responseObject[@"standing"])
+        {
+            Team *team = [Team new];
+
+            team.name = [standing objectForKey:@"first_name"];
+            team.conference = [standing objectForKey:@"conference"];
+            team.rank = [standing objectForKey:@"rank"];
+
+            NSString *record = [NSString stringWithFormat:@"%@ - %@", [standing objectForKey:@"won"], [standing objectForKey:@"lost"]];
+            team.record = record;
+
+            [teamsArray addObject:team];
+        }
+//        NSLog(@"JSON: %@", responseObject);
+        completion(teamsArray, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        completion(nil, error);
+    }];
+}
+
 +(void)retrieve2015DraftPicksWithBlock:(void (^)(NSArray *players, NSError *error))completion
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

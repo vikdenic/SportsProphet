@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0ZR-0f-kHO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rank The East View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RankTheEastViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -67,10 +68,10 @@
                                 <exclude reference="raA-2G-mac"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="qK6-al-ruy"/>
                                 <exclude reference="NkV-S8-chB"/>
                                 <exclude reference="jMF-MA-ZgN"/>
                                 <exclude reference="zY3-kl-DUx"/>
-                                <exclude reference="qK6-al-ruy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -78,10 +79,10 @@
                                 <include reference="raA-2G-mac"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="qK6-al-ruy"/>
                                 <include reference="NkV-S8-chB"/>
                                 <include reference="jMF-MA-ZgN"/>
                                 <include reference="zY3-kl-DUx"/>
-                                <include reference="qK6-al-ruy"/>
                             </mask>
                         </variation>
                     </view>

@@ -11,7 +11,7 @@
 		934E44A61B583E2900F6CA2B /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44A51B583E2900F6CA2B /* Team.m */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
-		93D037E31B4CCEC900927D17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* ViewController.m */; };
+		93D037E31B4CCEC900927D17 /* RankTheEastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* RankTheEastViewController.m */; };
 		93D037E61B4CCEC900927D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D037E41B4CCEC900927D17 /* Main.storyboard */; };
 		93D037E81B4CCEC900927D17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D037E71B4CCEC900927D17 /* Images.xcassets */; };
 		93D037EB1B4CCEC900927D17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D037E91B4CCEC900927D17 /* LaunchScreen.xib */; };
@@ -44,8 +44,8 @@
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93D037DE1B4CCEC900927D17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93D037DF1B4CCEC900927D17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93D037E11B4CCEC900927D17 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93D037E21B4CCEC900927D17 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		93D037E11B4CCEC900927D17 /* RankTheEastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankTheEastViewController.h; sourceTree = "<group>"; };
+		93D037E21B4CCEC900927D17 /* RankTheEastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankTheEastViewController.m; sourceTree = "<group>"; };
 		93D037E51B4CCEC900927D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93D037E71B4CCEC900927D17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		93D037EA1B4CCEC900927D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 				93D037E41B4CCEC900927D17 /* Main.storyboard */,
 				93D037DE1B4CCEC900927D17 /* AppDelegate.h */,
 				93D037DF1B4CCEC900927D17 /* AppDelegate.m */,
-				93D037E11B4CCEC900927D17 /* ViewController.h */,
-				93D037E21B4CCEC900927D17 /* ViewController.m */,
+				93D037E11B4CCEC900927D17 /* RankTheEastViewController.h */,
+				93D037E21B4CCEC900927D17 /* RankTheEastViewController.m */,
 				93D038041B4F7E9700927D17 /* Data Model */,
 				934E44A01B577A6700F6CA2B /* Utilities */,
 				93D037E71B4CCEC900927D17 /* Images.xcassets */,
@@ -326,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934E44A61B583E2900F6CA2B /* Team.m in Sources */,
-				93D037E31B4CCEC900927D17 /* ViewController.m in Sources */,
+				93D037E31B4CCEC900927D17 /* RankTheEastViewController.m in Sources */,
 				93D038031B4F7E8E00927D17 /* DataManager.m in Sources */,
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,

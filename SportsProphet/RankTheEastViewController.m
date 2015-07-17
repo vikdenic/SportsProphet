@@ -6,30 +6,49 @@
 //  Copyright (c) 2015 nektar labs. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RankTheEastViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface RankTheEastViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property NSMutableArray *teamsArray;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation ViewController
+@implementation RankTheEastViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.teamsArray = [NSMutableArray new];
 
     [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
 
-        [DataManager retrieveTeamswithBlock:^(NSArray *teams, NSError *error) {
-            self.teamsArray = (NSMutableArray *) teams;
+        [DataManager retrieveStandingsWithBlock:^(NSArray *teams, NSError *error) {
+
+            //Keep only Eastern Conference teams in the array
+            for (Team *team in teams)
+            {
+                if ([team.conference isEqualToString:@"EAST"])
+                {
+                    [self.teamsArray addObject:team];
+                }
+            }
+
             [self.tableView reloadData];
         }];
     }];
 
     [self.tableView setEditing:YES animated:NO];
+
+    [self getStandings];
+}
+
+-(void)getStandings
+{
+    [DataManager retrieveStandingsWithBlock:^(NSArray *teams, NSError *error) {
+        NSLog(@"%@", teams);
+    }];
 }
 
 #pragma mark - tableView
@@ -40,7 +59,12 @@
     Team *team = self.teamsArray[indexPath.row];
 
     cell.textLabel.text = team.name;
-    cell.detailTextLabel.text = team.conference;
+    cell.detailTextLabel.text = team.record;
+
+    if (indexPath.row < 8)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"%d - %@", indexPath.row + 1, team.name];
+    }
 
     return cell;
 }
@@ -57,6 +81,8 @@
     Team *teamToMove = self.teamsArray[sourceIndexPath.row];
     [self.teamsArray removeObjectAtIndex:sourceIndexPath.row];
     [self.teamsArray insertObject:teamToMove atIndex:destinationIndexPath.row];
+
+    [self.tableView reloadData];
 }
 
 //Removes deletion when in editing mode
