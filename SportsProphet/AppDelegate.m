@@ -20,9 +20,11 @@
     [ParseCrashReporting enable];
     [Team registerSubclass];
     [Player registerSubclass];
-    
+    [Prediction registerSubclass];
+
     [self parseSetup];
 
+    [self predictionRetrieval];
 //    [self sportsAPITokenRetrieval];
 
     return YES;
@@ -37,6 +39,19 @@
 
     [Parse setApplicationId:applicationId
                   clientKey:clientKey];
+}
+
+-(void)predictionRetrieval
+{
+    if ([User currentUser])
+    {
+        PFQuery *query = [PFQuery queryWithClassName:@"Prediction"];
+        [query whereKey:@"user" equalTo:[User currentUser]];
+
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error){
+            [UniversalPrediction sharedInstance].prediction = (Prediction *) object;
+        }];
+    }
 }
 
 -(void)sportsAPITokenRetrieval

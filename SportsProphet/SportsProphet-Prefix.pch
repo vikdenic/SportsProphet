@@ -22,9 +22,11 @@
 #import "User.h"
 #import "Team.h"
 #import "Player.h"
+#import "Prediction.h"
 
 //Singeltons
 #import "UniversalToken.h"
+#import "UniversalPrediction.h"
 
 //Utilities
 #import "Constants.h"

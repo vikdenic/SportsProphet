@@ -10,6 +10,7 @@
 
 @implementation Prediction
 
+@dynamic user;
 @dynamic eastRankings;
 @dynamic westRankings;
 

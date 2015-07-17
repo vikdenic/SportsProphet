@@ -24,7 +24,12 @@
 {
     User *user = [[User alloc] initWithUsername:username withPassword:password];
 
+    Prediction *prediction = [Prediction new];
+    prediction.user = [User currentUser];
+    [UniversalPrediction sharedInstance].prediction = prediction;
+
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [prediction saveInBackground];
         completionHandler(succeeded, error);
     }];
 }

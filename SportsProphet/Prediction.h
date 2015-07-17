@@ -10,6 +10,7 @@
 
 @interface Prediction : PFObject <PFSubclassing>
 
+@property User *user;
 @property NSArray *eastRankings;
 @property NSArray *westRankings;
 

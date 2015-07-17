@@ -123,9 +123,27 @@
 
         [self.navigationController pushViewController:rankTheWestVC animated:YES];
     }
+
+    [self savePredictions];
 }
 
 #pragma mark - helpers
+-(void)savePredictions
+{
+    Prediction *prediction = [UniversalPrediction sharedInstance].prediction;
+
+    if ([self.conference isEqualToString: @"EAST"])
+    {
+        prediction.eastRankings = self.teamsArray;
+    }
+    else
+    {
+        prediction.westRankings = self.teamsArray;
+    }
+
+    [prediction saveInBackground];
+}
+
 -(void)sportsAPITokenRetrievalWithBlock:(void (^)(BOOL success, NSError *error))completion;
 {
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {

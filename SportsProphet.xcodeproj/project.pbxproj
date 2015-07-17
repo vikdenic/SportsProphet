@@ -13,6 +13,7 @@
 		934E44AF1B58BE2900F6CA2B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44AE1B58BE2900F6CA2B /* LoginViewController.m */; };
 		934E44B31B58C32F00F6CA2B /* VZAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44B21B58C32F00F6CA2B /* VZAlert.m */; };
 		935CB2CF1B58E0EC00EAC6EA /* Prediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 935CB2CE1B58E0EC00EAC6EA /* Prediction.m */; };
+		935CB2D21B58E72400EAC6EA /* UniversalPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
 		93D037E31B4CCEC900927D17 /* RankYourNBATeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* RankYourNBATeamsViewController.m */; };
@@ -51,6 +52,8 @@
 		934E44B21B58C32F00F6CA2B /* VZAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VZAlert.m; sourceTree = "<group>"; };
 		935CB2CD1B58E0EC00EAC6EA /* Prediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prediction.h; sourceTree = "<group>"; };
 		935CB2CE1B58E0EC00EAC6EA /* Prediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prediction.m; sourceTree = "<group>"; };
+		935CB2D01B58E72400EAC6EA /* UniversalPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalPrediction.h; sourceTree = "<group>"; };
+		935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalPrediction.m; sourceTree = "<group>"; };
 		93D037D71B4CCEC900927D17 /* SportsProphet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsProphet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D037DB1B4CCEC900927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				935CB2CE1B58E0EC00EAC6EA /* Prediction.m */,
 				93ED62FC1B4FA3310004D9E5 /* UniversalToken.h */,
 				93ED62FD1B4FA3310004D9E5 /* UniversalToken.m */,
+				935CB2D01B58E72400EAC6EA /* UniversalPrediction.h */,
+				935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */,
 				93D037DD1B4CCEC900927D17 /* main.m in Sources */,
 				93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */,
+				935CB2D21B58E72400EAC6EA /* UniversalPrediction.m in Sources */,
 				934E44A31B577A9D00F6CA2B /* Constants.m in Sources */,
 				93ED62FE1B4FA3310004D9E5 /* UniversalToken.m in Sources */,
 			);
