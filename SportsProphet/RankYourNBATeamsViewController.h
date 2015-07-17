@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RankTheEastViewController : UIViewController
+@interface RankYourNBATeamsViewController : UIViewController
 
+@property NSString *conference;
 
 @end
 

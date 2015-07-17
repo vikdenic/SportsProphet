@@ -6,21 +6,29 @@
 //  Copyright (c) 2015 nektar labs. All rights reserved.
 //
 
-#import "RankTheEastViewController.h"
+#import "RankYourNBATeamsViewController.h"
 
-@interface RankTheEastViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface RankYourNBATeamsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property NSMutableArray *teamsArray;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation RankTheEastViewController
+@implementation RankYourNBATeamsViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.teamsArray = [NSMutableArray new];
+
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
+    if (self.conference == nil)
+    {
+        self.conference = @"EAST";
+    }
 
     [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
 
@@ -29,7 +37,7 @@
             //Keep only Eastern Conference teams in the array
             for (Team *team in teams)
             {
-                if ([team.conference isEqualToString:@"EAST"])
+                if ([team.conference isEqualToString:self.conference])
                 {
                     [self.teamsArray addObject:team];
                 }
@@ -94,6 +102,21 @@
 - (BOOL)tableView:(UITableView *)tableview shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
+}
+
+#pragma mark - Actions
+- (IBAction)onNextBarButtonTapped:(UIBarButtonItem *)sender
+{
+    if ([self.conference isEqualToString: @"EAST"])
+    {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+        RankYourNBATeamsViewController *rankTheWestVC = [storyboard instantiateViewControllerWithIdentifier:@"RankYourNBATeamsViewController"];
+
+        rankTheWestVC.conference = @"WEST";
+
+        [self.navigationController pushViewController:rankTheWestVC animated:YES];
+    }
 }
 
 #pragma mark - helpers

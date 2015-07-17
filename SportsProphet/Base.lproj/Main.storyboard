@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Rank The East View Controller-->
+        <!--Rank YourNBA Teams View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="RankTheEastViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RankYourNBATeamsViewController" id="vXZ-lx-hvc" customClass="RankYourNBATeamsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -86,7 +86,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="fnK-W0-cvF"/>
+                    <navigationItem key="navigationItem" id="fnK-W0-cvF">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="nZh-Ad-ReZ">
+                            <connections>
+                                <action selector="onNextBarButtonTapped:" destination="vXZ-lx-hvc" id="kvW-6y-7bV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="raA-2G-mac" id="h0d-W6-mo2"/>
                     </connections>
