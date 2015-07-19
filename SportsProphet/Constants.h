@@ -11,5 +11,7 @@
 @interface Constants : NSObject
 
 extern NSString *const kSegueNotLoggedIn;
+extern NSString *const kEasternConference;
+extern NSString *const kWesternConference;
 
 @end

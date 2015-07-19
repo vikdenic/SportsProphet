@@ -25,8 +25,8 @@
     [self parseSetup];
 
     [self predictionRetrieval];
-//    [self sportsAPITokenRetrieval];
-
+//    [self save];
+//    [self makeArray];
     return YES;
 }
 
@@ -54,7 +54,7 @@
     }
 }
 
--(void)sportsAPITokenRetrieval
+-(void)sportsAPITokenRetrievalWithBlock:(void (^)(BOOL success, NSError *error))completion;
 {
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
 
@@ -63,11 +63,15 @@
             NSString *token = config[@"xmlstatsToken"];
             [UniversalToken sharedInstance].token = token;
             NSLog(@"xmlstats token: %@", token);
+            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"xmlStatsToken"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
         else
         {
             NSLog(@"%@", error);
         }
+
+        completion(YES, error);
     }];
 }
 

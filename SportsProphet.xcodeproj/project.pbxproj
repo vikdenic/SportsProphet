@@ -14,6 +14,7 @@
 		934E44B31B58C32F00F6CA2B /* VZAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E44B21B58C32F00F6CA2B /* VZAlert.m */; };
 		935CB2CF1B58E0EC00EAC6EA /* Prediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 935CB2CE1B58E0EC00EAC6EA /* Prediction.m */; };
 		935CB2D21B58E72400EAC6EA /* UniversalPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */; };
+		93B189811B5B352900ADD2F1 /* NBA_Standings_14-15.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93B1897F1B5B0F4B00ADD2F1 /* NBA_Standings_14-15.plist */; };
 		93D037DD1B4CCEC900927D17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DC1B4CCEC900927D17 /* main.m */; };
 		93D037E01B4CCEC900927D17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037DF1B4CCEC900927D17 /* AppDelegate.m */; };
 		93D037E31B4CCEC900927D17 /* RankYourNBATeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037E21B4CCEC900927D17 /* RankYourNBATeamsViewController.m */; };
@@ -54,6 +55,7 @@
 		935CB2CE1B58E0EC00EAC6EA /* Prediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prediction.m; sourceTree = "<group>"; };
 		935CB2D01B58E72400EAC6EA /* UniversalPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalPrediction.h; sourceTree = "<group>"; };
 		935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalPrediction.m; sourceTree = "<group>"; };
+		93B1897F1B5B0F4B00ADD2F1 /* NBA_Standings_14-15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NBA_Standings_14-15.plist"; sourceTree = "<group>"; };
 		93D037D71B4CCEC900927D17 /* SportsProphet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsProphet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D037DB1B4CCEC900927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037DC1B4CCEC900927D17 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				93D037DB1B4CCEC900927D17 /* Info.plist */,
 				93D038051B4F843B00927D17 /* Keys.plist */,
+				93B1897F1B5B0F4B00ADD2F1 /* NBA_Standings_14-15.plist */,
 				93D037DC1B4CCEC900927D17 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -308,6 +311,7 @@
 				93D037E61B4CCEC900927D17 /* Main.storyboard in Resources */,
 				93D037EB1B4CCEC900927D17 /* LaunchScreen.xib in Resources */,
 				93D037E81B4CCEC900927D17 /* Images.xcassets in Resources */,
+				93B189811B5B352900ADD2F1 /* NBA_Standings_14-15.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

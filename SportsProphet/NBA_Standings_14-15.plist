@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Atlanta Hawks</string>
+		<key>rank</key>
+		<integer>1</integer>
+		<key>record</key>
+		<string>60 - 22</string>
+		<key>team_id</key>
+		<string>atlanta-hawks</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Cleveland Cavaliers</string>
+		<key>rank</key>
+		<integer>2</integer>
+		<key>record</key>
+		<string>53 - 29</string>
+		<key>team_id</key>
+		<string>cleveland-cavaliers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Chicago Bulls</string>
+		<key>rank</key>
+		<integer>3</integer>
+		<key>record</key>
+		<string>50 - 32</string>
+		<key>team_id</key>
+		<string>chicago-bulls</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Toronto Raptors</string>
+		<key>rank</key>
+		<integer>4</integer>
+		<key>record</key>
+		<string>49 - 33</string>
+		<key>team_id</key>
+		<string>toronto-raptors</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Washington Wizards</string>
+		<key>rank</key>
+		<integer>5</integer>
+		<key>record</key>
+		<string>46 - 36</string>
+		<key>team_id</key>
+		<string>washington-wizards</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Milwaukee Bucks</string>
+		<key>rank</key>
+		<integer>6</integer>
+		<key>record</key>
+		<string>41 - 41</string>
+		<key>team_id</key>
+		<string>milwaukee-bucks</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Boston Celtics</string>
+		<key>rank</key>
+		<integer>7</integer>
+		<key>record</key>
+		<string>40 - 42</string>
+		<key>team_id</key>
+		<string>boston-celtics</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Brooklyn Nets</string>
+		<key>rank</key>
+		<integer>8</integer>
+		<key>record</key>
+		<string>38 - 44</string>
+		<key>team_id</key>
+		<string>brooklyn-nets</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Indiana Pacers</string>
+		<key>rank</key>
+		<integer>8</integer>
+		<key>record</key>
+		<string>38 - 44</string>
+		<key>team_id</key>
+		<string>indiana-pacers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Miami Heat</string>
+		<key>rank</key>
+		<integer>10</integer>
+		<key>record</key>
+		<string>37 - 45</string>
+		<key>team_id</key>
+		<string>miami-heat</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Charlotte Hornets</string>
+		<key>rank</key>
+		<integer>11</integer>
+		<key>record</key>
+		<string>33 - 49</string>
+		<key>team_id</key>
+		<string>charlotte-hornets</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Detroit Pistons</string>
+		<key>rank</key>
+		<integer>12</integer>
+		<key>record</key>
+		<string>32 - 50</string>
+		<key>team_id</key>
+		<string>detroit-pistons</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Orlando Magic</string>
+		<key>rank</key>
+		<integer>13</integer>
+		<key>record</key>
+		<string>25 - 57</string>
+		<key>team_id</key>
+		<string>orlando-magic</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>Philadelphia 76ers</string>
+		<key>rank</key>
+		<integer>14</integer>
+		<key>record</key>
+		<string>18 - 64</string>
+		<key>team_id</key>
+		<string>philadelphia-76ers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>EAST</string>
+		<key>full_name</key>
+		<string>New York Knicks</string>
+		<key>rank</key>
+		<integer>15</integer>
+		<key>record</key>
+		<string>17 - 65</string>
+		<key>team_id</key>
+		<string>new-york-knicks</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Golden State Warriors</string>
+		<key>rank</key>
+		<integer>1</integer>
+		<key>record</key>
+		<string>67 - 15</string>
+		<key>team_id</key>
+		<string>golden-state-warriors</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Houston Rockets</string>
+		<key>rank</key>
+		<integer>2</integer>
+		<key>record</key>
+		<string>56 - 26</string>
+		<key>team_id</key>
+		<string>houston-rockets</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Los Angeles Clippers</string>
+		<key>rank</key>
+		<integer>2</integer>
+		<key>record</key>
+		<string>56 - 26</string>
+		<key>team_id</key>
+		<string>los-angeles-clippers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Portland Trail Blazers</string>
+		<key>rank</key>
+		<integer>6</integer>
+		<key>record</key>
+		<string>51 - 31</string>
+		<key>team_id</key>
+		<string>portland-trail-blazers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Memphis Grizzlies</string>
+		<key>rank</key>
+		<integer>4</integer>
+		<key>record</key>
+		<string>55 - 27</string>
+		<key>team_id</key>
+		<string>memphis-grizzlies</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>San Antonio Spurs</string>
+		<key>rank</key>
+		<integer>4</integer>
+		<key>record</key>
+		<string>55 - 27</string>
+		<key>team_id</key>
+		<string>san-antonio-spurs</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Dallas Mavericks</string>
+		<key>rank</key>
+		<integer>7</integer>
+		<key>record</key>
+		<string>50 - 32</string>
+		<key>team_id</key>
+		<string>dallas-mavericks</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>New Orleans Pelicans</string>
+		<key>rank</key>
+		<integer>8</integer>
+		<key>record</key>
+		<string>45 - 37</string>
+		<key>team_id</key>
+		<string>new-orleans-pelicans</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Oklahoma City Thunder</string>
+		<key>rank</key>
+		<integer>8</integer>
+		<key>record</key>
+		<string>45 - 37</string>
+		<key>team_id</key>
+		<string>oklahoma-city-thunder</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Phoenix Suns</string>
+		<key>rank</key>
+		<integer>10</integer>
+		<key>record</key>
+		<string>39 - 43</string>
+		<key>team_id</key>
+		<string>phoenix-suns</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Utah Jazz</string>
+		<key>rank</key>
+		<integer>11</integer>
+		<key>record</key>
+		<string>38 - 44</string>
+		<key>team_id</key>
+		<string>utah-jazz</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Denver Nuggets</string>
+		<key>rank</key>
+		<integer>12</integer>
+		<key>record</key>
+		<string>30 - 52</string>
+		<key>team_id</key>
+		<string>denver-nuggets</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Sacramento Kings</string>
+		<key>rank</key>
+		<integer>13</integer>
+		<key>record</key>
+		<string>29 - 53</string>
+		<key>team_id</key>
+		<string>sacramento-kings</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Los Angeles Lakers</string>
+		<key>rank</key>
+		<integer>14</integer>
+		<key>record</key>
+		<string>21 - 61</string>
+		<key>team_id</key>
+		<string>los-angeles-lakers</string>
+	</dict>
+	<dict>
+		<key>conference</key>
+		<string>WEST</string>
+		<key>full_name</key>
+		<string>Minnesota Timberwolves</string>
+		<key>rank</key>
+		<integer>15</integer>
+		<key>record</key>
+		<string>16 - 66</string>
+		<key>team_id</key>
+		<string>minnesota-timberwolves</string>
+	</dict>
+</array>
+</plist>

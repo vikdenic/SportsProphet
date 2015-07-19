@@ -23,7 +23,7 @@
         {
             Team *newTeam = [Team new];
 
-            newTeam.name = [team objectForKey:@"full_name"];
+            newTeam.fullName = [team objectForKey:@"full_name"];
             newTeam.conference = [team objectForKey:@"conference"];
 
             [newTeamsArray addObject:newTeam];
@@ -76,7 +76,9 @@
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+//    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"xmlStatsToken"];
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", token];
 
     [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
 
@@ -88,9 +90,10 @@
         {
             Team *team = [Team new];
 
-            team.name = [standing objectForKey:@"first_name"];
+            team.fullName = [NSString stringWithFormat:@"%@ %@", [standing objectForKey:@"first_name"], [standing objectForKey:@"last_name"]];
             team.conference = [standing objectForKey:@"conference"];
             team.rank = [standing objectForKey:@"rank"];
+            team.team_id = [standing objectForKey:@"team_id"];
 
             NSString *record = [NSString stringWithFormat:@"%@ - %@", [standing objectForKey:@"won"], [standing objectForKey:@"lost"]];
             team.record = record;

@@ -8,11 +8,19 @@
 
 #import <Parse/Parse.h>
 
+typedef NS_ENUM(NSInteger, Conference) {
+    EasternConference,
+    WesternConference,
+};
+
 @interface Team : PFObject <PFSubclassing>
 
-@property NSString *name;
+@property NSString *fullName;
 @property NSString *conference;
 @property NSString *record;
-@property NSString *rank;
+@property NSInteger rank;
+@property NSString *team_id;
+
++(NSArray *)getStandingsForConference:(Conference)conference;
 
 @end

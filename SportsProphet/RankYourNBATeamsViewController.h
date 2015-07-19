@@ -10,7 +10,7 @@
 
 @interface RankYourNBATeamsViewController : UIViewController
 
-@property NSString *conference;
+@property Conference conference;
 
 @end
 

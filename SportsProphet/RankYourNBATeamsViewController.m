@@ -31,53 +31,29 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    if (self.conference == nil)
+    if (!self.conference)
     {
-        self.conference = @"EAST";
+        self.conference = EasternConference;
     }
 
-    [self sportsAPITokenRetrievalWithBlock:^(BOOL success, NSError *error) {
-
-        [DataManager retrieveStandingsWithBlock:^(NSArray *teams, NSError *error) {
-
-            //Keep only Eastern Conference teams in the array
-            for (Team *team in teams)
-            {
-                if ([team.conference isEqualToString:self.conference])
-                {
-                    [self.teamsArray addObject:team];
-                }
-            }
-
-            [self.tableView reloadData];
-        }];
-    }];
+    self.teamsArray = [NSMutableArray arrayWithArray:[Team getStandingsForConference:self.conference]];
+    [self.tableView reloadData];
 
     [self.tableView setEditing:YES animated:NO];
-
-    [self getStandings];
-}
-
--(void)getStandings
-{
-    [DataManager retrieveStandingsWithBlock:^(NSArray *teams, NSError *error) {
-        NSLog(@"%@", teams);
-    }];
 }
 
 #pragma mark - tableView
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TeamCell"];
     Team *team = self.teamsArray[indexPath.row];
 
-    cell.textLabel.text = team.name;
+    cell.textLabel.text = team.fullName;
     cell.detailTextLabel.text = team.record;
 
     if (indexPath.row < 8)
     {
-        cell.textLabel.text = [NSString stringWithFormat:@"%d - %@", indexPath.row + 1, team.name];
+        cell.textLabel.text = [NSString stringWithFormat:@"%i - %@", indexPath.row + 1, team.fullName];
     }
 
     return cell;
@@ -113,13 +89,13 @@
 #pragma mark - Actions
 - (IBAction)onNextBarButtonTapped:(UIBarButtonItem *)sender
 {
-    if ([self.conference isEqualToString: @"EAST"])
+    if (self.conference == EasternConference)
     {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 
         RankYourNBATeamsViewController *rankTheWestVC = [storyboard instantiateViewControllerWithIdentifier:@"RankYourNBATeamsViewController"];
 
-        rankTheWestVC.conference = @"WEST";
+        rankTheWestVC.conference = WesternConference;
 
         [self.navigationController pushViewController:rankTheWestVC animated:YES];
     }
@@ -132,7 +108,7 @@
 {
     Prediction *prediction = [UniversalPrediction sharedInstance].prediction;
 
-    if ([self.conference isEqualToString: @"EAST"])
+    if (self.conference == EasternConference)
     {
         prediction.eastRankings = self.teamsArray;
     }
@@ -153,6 +129,8 @@
             NSString *token = config[@"xmlstatsToken"];
             [UniversalToken sharedInstance].token = token;
             NSLog(@"xmlstats token: %@", token);
+            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"xmlStatsToken"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
         else
         {
