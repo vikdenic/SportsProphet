@@ -10,6 +10,26 @@
 
 @implementation DataManager
 
++(void)retrieveSportsAPITokenWithBlock:(void (^)(BOOL success, NSError *error))completion;
+{
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+
+        if (error == nil)
+        {
+            NSString *token = config[@"xmlstatsToken"];
+            NSLog(@"xmlstats token: %@", token);
+            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"xmlStatsToken"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        else
+        {
+            NSLog(@"%@", error);
+        }
+
+        completion(YES, error);
+    }];
+}
+
 +(void)retrieveTeamswithBlock:(void (^)(NSArray *teams, NSError *error))completion
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -41,7 +61,7 @@
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"xmlStatsToken"]];
 
     [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
 
@@ -112,7 +132,7 @@
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [UniversalToken sharedInstance].token];
+    NSString *tokenString = [NSString stringWithFormat:@"Bearer %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"xmlStatsToken"]];
 
     [manager.requestSerializer setValue:tokenString forHTTPHeaderField:@"Authorization"];
     NSDictionary *paramaters = @{@"season" : @"2015"};

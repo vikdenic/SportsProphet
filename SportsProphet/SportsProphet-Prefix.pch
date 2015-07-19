@@ -25,7 +25,6 @@
 #import "Prediction.h"
 
 //Singeltons
-#import "UniversalToken.h"
 #import "UniversalPrediction.h"
 
 //Utilities

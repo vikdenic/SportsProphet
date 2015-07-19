@@ -25,7 +25,6 @@
 		93D038031B4F7E8E00927D17 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D038021B4F7E8E00927D17 /* DataManager.m */; };
 		93D038061B4F843B00927D17 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93D038051B4F843B00927D17 /* Keys.plist */; };
 		93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ED62FA1B4F88F00004D9E5 /* Player.m */; };
-		93ED62FE1B4FA3310004D9E5 /* UniversalToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ED62FD1B4FA3310004D9E5 /* UniversalToken.m */; };
 		9BE06066BFCF5C70FA3343AB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D73B4480946FDF47B6637776 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +74,6 @@
 		93D038051B4F843B00927D17 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		93ED62F91B4F88F00004D9E5 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		93ED62FA1B4F88F00004D9E5 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		93ED62FC1B4FA3310004D9E5 /* UniversalToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalToken.h; sourceTree = "<group>"; };
-		93ED62FD1B4FA3310004D9E5 /* UniversalToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalToken.m; sourceTree = "<group>"; };
 		CE3516B992AAFABBAA00318F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D73B4480946FDF47B6637776 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -217,8 +214,6 @@
 				93ED62FA1B4F88F00004D9E5 /* Player.m */,
 				935CB2CD1B58E0EC00EAC6EA /* Prediction.h */,
 				935CB2CE1B58E0EC00EAC6EA /* Prediction.m */,
-				93ED62FC1B4FA3310004D9E5 /* UniversalToken.h */,
-				93ED62FD1B4FA3310004D9E5 /* UniversalToken.m */,
 				935CB2D01B58E72400EAC6EA /* UniversalPrediction.h */,
 				935CB2D11B58E72400EAC6EA /* UniversalPrediction.m */,
 			);
@@ -374,7 +369,6 @@
 				93ED62FB1B4F88F00004D9E5 /* Player.m in Sources */,
 				935CB2D21B58E72400EAC6EA /* UniversalPrediction.m in Sources */,
 				934E44A31B577A9D00F6CA2B /* Constants.m in Sources */,
-				93ED62FE1B4FA3310004D9E5 /* UniversalToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

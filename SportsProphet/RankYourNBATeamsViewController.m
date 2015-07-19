@@ -120,25 +120,4 @@
     [prediction saveInBackground];
 }
 
--(void)sportsAPITokenRetrievalWithBlock:(void (^)(BOOL success, NSError *error))completion;
-{
-    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
-
-        if (error == nil)
-        {
-            NSString *token = config[@"xmlstatsToken"];
-            [UniversalToken sharedInstance].token = token;
-            NSLog(@"xmlstats token: %@", token);
-            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"xmlStatsToken"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-        else
-        {
-            NSLog(@"%@", error);
-        }
-
-        completion(YES, error);
-    }];
-}
-
 @end

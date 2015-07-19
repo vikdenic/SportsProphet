@@ -10,7 +10,6 @@
 #import <XCTest/XCTest.h>
 #import "DataManager.h"
 #import "Parse.h"
-#import "UniversalToken.h"
 
 @interface SportsProphetTests : XCTestCase
 
@@ -99,7 +98,6 @@
         if (error == nil)
         {
             NSString *token = config[@"xmlstatsToken"];
-            [UniversalToken sharedInstance].token = token;
             NSLog(@"xmlstats token: %@", token);
         }
         else
